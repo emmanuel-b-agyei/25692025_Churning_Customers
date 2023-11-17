@@ -75,20 +75,17 @@ input_df = pd.DataFrame({
     'TotalCharges': [total_charges]
 })
 
+# encoding categorical variable
 numeric_features = input_df.select_dtypes(include = [np.number]).columns
 categorical_features = input_df.select_dtypes(exclude = [np.number]).columns
 
-# encoding categorical variable
 encoder = OneHotEncoder(drop='first', sparse=False)
 input_encoded = encoder.fit_transform(input_df[categorical_features])
 input_data = np.concatenate((input_df[numeric_features].values, input_encoded), axis=1)
-print(input_data)
+
 
 # Function call on button click
 if st.button('Predict Churn'):
-    print(input_encoded)
-    print(input_data)
-
     prediction = predict_churn(input_data)
     st.write(f'Predicted Churn: {prediction}')
 
