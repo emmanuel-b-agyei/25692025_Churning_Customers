@@ -41,7 +41,7 @@ To make a prediction, users can input the following customer details:
 - Contract type, Billing preferences, and Payment Method
 
 ## Output
-Based on the trained model, the application provides a predicted churn status for the given customer. Here is a link to a video on how the web application works: 
+Based on the trained model, the application provides a predicted churn status for the given customer. Here is a link to a video on how the web application works: https://drive.google.com/file/d/18yYSLkTiwT8a1kJ3MvTpDFurpETHUpRt/view?usp=sharing 
 
 ## Future Improvements
 There is a need for more enhancement on this project.
